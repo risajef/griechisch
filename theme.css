@@ -1,0 +1,43 @@
+/* Website theme adapter. Layout stays app-specific while colors and typography follow the site. */
+@import url('/assets/theme/risajef-theme.css');
+
+:root {
+  --ink: var(--text-main, #1a1a1a);
+  --muted: var(--text-secondary, #555);
+  --paper: var(--bg-main, #fff);
+  --white: var(--surface-card, #fff);
+  --green: var(--primary, #8b0000);
+  --mint: color-mix(in srgb, var(--primary, #8b0000) 8%, var(--bg-main, #fff));
+  --line: var(--border-color, #888);
+  --gold: var(--accent, #d4af37);
+}
+
+body { font-family: var(--font-sans, Inter, Arial, sans-serif); }
+.brand-mark { border-radius: var(--radius-sm, 2px); }
+.brand b, h1, h2, h3 { font-family: var(--font-heading, Inter, Arial, sans-serif); }
+h1, h2, h3 { color: var(--primary, #8b0000); letter-spacing: normal; }
+.brand { color: var(--primary, #8b0000); }
+.brand small, .streak { color: var(--text-secondary, #555); }
+.nav-label { color: var(--text-muted, #888); }
+.nav { color: var(--text-secondary, #555); border-radius: var(--radius-sm, 2px); }
+.nav:hover, .nav.active { background: var(--mint); color: var(--primary, #8b0000); }
+.note { border-radius: var(--radius-sm, 2px); border-left-color: var(--primary, #8b0000); }
+.stats > div, .path-card, .letter-card, .word-card, .lesson-card, .verse-card,
+.practice-card, .answer, .quiet, .primary, .verse-actions button, .verse-reveal {
+  border-radius: var(--radius-sm, 2px);
+  border-color: var(--line);
+  box-shadow: none;
+}
+.path-card > span, .count, .eyebrow, .sound { color: var(--primary, #8b0000); }
+.path-card:hover, .letter-card:hover, .word-card:hover, .lesson-card:hover, .verse-card:hover {
+  border-color: var(--primary, #8b0000);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgb(0 0 0 / 8%));
+}
+.primary { background: var(--primary, #8b0000); color: var(--text-on-primary, #fff); }
+.primary:hover { background: var(--primary-hover, #a11212); }
+.answer:hover, .quiet:hover, .verse-actions button:hover { border-color: var(--primary, #8b0000); color: var(--primary, #8b0000); }
+.verse-reveal { background: var(--bg-secondary, #f7f7f7); }
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--primary, #8b0000);
+  outline-offset: 3px;
+}
